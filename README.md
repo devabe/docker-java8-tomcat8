@@ -31,22 +31,5 @@ You can now configure to this Tomcat server using:
 A prebuilt container is available on Docker Hub, you can get it with following command
 
 ```sh
-docker pull inovatrend/tomcat8-java8
+docker pull abecha/tomcat8-jdk8:tagname
 ```
-
-### Usage
-
-To test run it, run following command:
-
-```sh
-docker run --rm -P -t -i inovatrend/tomcat8-java8 /sbin/my_init -- bash -l
-```
-
-To run it as daemon, you can use command similar to this one:
-
-```sh
-docker run -d -p 49154:8080 --name app_name -e "JAVA_OPTS=-Dsome.property=value -Xmx1024m" -e "TOMCAT_PASS=somePass" inovatrend/tomcat8-java8
-```
-
-
-# docker-java8-tomcat8
